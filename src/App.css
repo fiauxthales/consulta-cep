@@ -1,0 +1,21 @@
+.form-cep {
+  width: 100vh;
+  height: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.campocep {
+  padding: 10px 25px;
+  background-color: #97d8b2;
+  text-align: center;
+  border-color: ;
+  border-radius: 8px;
+}
+.campocep:hover {
+  box-shadow: 0.1em 0.1em 5px #4ebc7b;
+}
+::placeholder {
+  color: #222222;
+  font-weight: bold;
+}
