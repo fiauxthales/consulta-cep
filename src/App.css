@@ -19,3 +19,14 @@
   color: #222222;
   font-weight: bold;
 }
+.botao-pesquisa-cep {
+  background-color: rgb(55, 124, 57); /* Green */
+  border-radius: 8px;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px;
+}
