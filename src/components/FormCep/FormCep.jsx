@@ -13,7 +13,7 @@ class FormCep extends Component {
   _criarCard(evento){
     evento.preventDefault();
     evento.stopPropagation();
-    this.props.criarCep(this.cep);
+    this.props.criarCard(this.cep);
   }
   render(){
     return(

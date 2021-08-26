@@ -1,20 +1,22 @@
 import React from "react";
 import "./App.css";
 import FormCep from "./components/FormCep";
-import CepList from "./components/CepList";
+import ListaDeLocais from "./components/ListaDeLocais";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { ceps: [] };
+    this.state = {
+      locais: [],
+    };
   }
 
-  criarCep(cep) {
-    const novoCep = { cep };
-    const novoArrayCeps = [...this.state.ceps, novoCep];
+  criarCard(cep) {
+    const novoCard = { cep };
+    const novoArrayLocais = [...this.state.locais, novoCard];
     const novoEstado = {
-      notas: novoArrayCeps,
+      locais: novoArrayLocais,
     };
     this.setState(novoEstado);
   }
@@ -22,8 +24,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <FormCep criarCep={this.criarCep.bind(this)} />
-        <CepList ceps={this.state.ceps} />
+        <FormCep criarCard={this.criarCard.bind(this)} />
+        <ListaDeLocais locais={this.state.locais} />
       </div>
     );
   }
