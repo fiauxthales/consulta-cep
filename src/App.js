@@ -13,12 +13,19 @@ class App extends React.Component {
   }
 
   criarCard(cep) {
-    const novoCard = { cep };
-    const novoArrayLocais = [...this.state.locais, novoCard];
-    const novoEstado = {
-      locais: novoArrayLocais,
-    };
-    this.setState(novoEstado);
+    if (
+      this.state.locais.length === 0 ||
+      cep !== this.state.locais[this.state.locais.length - 1].cep
+    ) {
+      const novoCard = { cep };
+      const novoArrayLocais = [...this.state.locais, novoCard];
+      const novoEstado = {
+        locais: novoArrayLocais,
+      };
+      this.setState(novoEstado);
+    } else {
+      alert("cep repetido");
+    }
   }
 
   render() {

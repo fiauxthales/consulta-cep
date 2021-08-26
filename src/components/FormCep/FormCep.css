@@ -1,0 +1,30 @@
+.form-cep {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.campocep {
+  padding: 10px 25px;
+  background-color: #97d8b2;
+  text-align: center;
+  border-color: ;
+  border-radius: 8px;
+  outline: none;
+}
+.campocep:hover {
+  box-shadow: 0.1em 0.1em 5px #4ebc7b;
+}
+::placeholder {
+  color: #222222;
+  font-weight: bold;
+}
+.botao-pesquisa-cep {
+  background-color: rgb(55, 124, 57); /* Green */
+  border-radius: 8px;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px;
+}

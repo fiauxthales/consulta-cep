@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import buscaEndereco from "../../api";
+import "./CardLocal.css";
 
 class CardLocal extends Component {
 
@@ -10,22 +11,22 @@ class CardLocal extends Component {
   async componentDidMount(){
     const caminho = this.props.cep + "/json";
     const resposta = await buscaEndereco.get(caminho);
-    console.log(resposta.data);
     this.setState({endereco: resposta.data})
   }
 
   render(){
-    const {endereco} = this.state;
+    var {endereco} = this.state;
     return(
-      <section>
+      <section className="card-local flex-center">
         <header>
-          <h3>{this.props.cep}</h3>
+          <h3 className="cep">{this.props.cep}</h3>
         </header>
-        <p>
-          LOGRADOURO: {endereco.logradouro} <br />
-          CIDADE: {endereco.localidade} <br />
-          UF: {endereco.uf} <br />
-        </p>
+        <ul className="inf-local flex-center">
+          <li>{endereco.logradouro}</li>
+          <li>{endereco.bairro}</li>
+          <li>{endereco.localidade}</li>
+          <li>{endereco.uf}</li>
+        </ul>
       </section>
     )
   }

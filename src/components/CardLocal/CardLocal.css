@@ -1,0 +1,11 @@
+.card-local {
+  flex-direction: column;
+}
+.cep {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+.inf-local {
+  flex-direction: column;
+}

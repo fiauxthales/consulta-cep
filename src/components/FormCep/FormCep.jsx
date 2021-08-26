@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./FormCep.css";
 
 class FormCep extends Component {
+
   constructor(props){
     super(props);
     this.cep ="";
@@ -17,7 +18,7 @@ class FormCep extends Component {
   }
   render(){
     return(
-      <form className="form-cep"
+      <form className="form-cep flex-center"
       onSubmit={this._criarCard.bind(this)}>
         <input
           className="campocep"
@@ -25,7 +26,7 @@ class FormCep extends Component {
           placeholder="CEP"
           type="text"
         />
-        <button className="botao-pesquisa-cep">
+        <button  className="botao-pesquisa-cep">
           Pesquisar
         </button>
       </form>
