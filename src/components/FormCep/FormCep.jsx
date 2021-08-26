@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./FormCep.css";
+import Input from '@material-ui/core/Input'
+import  Button  from '@material-ui/core/Button';
 
 class FormCep extends Component {
 
@@ -20,15 +22,14 @@ class FormCep extends Component {
     return(
       <form className="form-cep flex-center"
       onSubmit={this._criarCard.bind(this)}>
-        <input
-          className="campocep"
+        <Input
           onChange={this._handleMudancaCep.bind(this)}
           placeholder="CEP"
           type="text"
         />
-        <button  className="botao-pesquisa-cep">
+        <Button color="primary" variant="contained" type="submit">
           Pesquisar
-        </button>
+        </Button>
       </form>
     )
   }

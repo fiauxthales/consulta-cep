@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import buscaEndereco from "../../api";
 import "./CardLocal.css";
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 
 class CardLocal extends Component {
 
@@ -17,17 +20,17 @@ class CardLocal extends Component {
   render(){
     var {endereco} = this.state;
     return(
-      <section className="card-local flex-center">
-        <header>
-          <h3 className="cep">{this.props.cep}</h3>
-        </header>
-        <ul className="inf-local flex-center">
-          <li>{endereco.logradouro}</li>
-          <li>{endereco.bairro}</li>
-          <li>{endereco.localidade}</li>
-          <li>{endereco.uf}</li>
-        </ul>
-      </section>
+      <Card>
+        <CardContent>
+          <Typography>{this.props.cep}</Typography>
+          <ul className="inf-local flex-center">
+            <li>{endereco.logradouro}</li>
+            <li>{endereco.bairro}</li>
+            <li>{endereco.localidade}</li>
+            <li>{endereco.uf}</li>
+          </ul>
+        </CardContent>
+      </Card>
     )
   }
 }
