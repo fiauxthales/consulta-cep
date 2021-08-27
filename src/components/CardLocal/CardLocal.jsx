@@ -20,9 +20,9 @@ class CardLocal extends Component {
   render(){
     var {endereco} = this.state;
     return(
-      <Card>
+      <Card style={{margin: 10, height: 200, width: 200}} color="primary" variant="outlined">
         <CardContent>
-          <Typography>{this.props.cep}</Typography>
+          <Typography style={{fontWeight: 900, margin: 30, color: '#00652E'}} variant="subtitle1" align="center">{this.props.cep}</Typography>
           <ul className="inf-local flex-center">
             <li>{endereco.logradouro}</li>
             <li>{endereco.bairro}</li>
